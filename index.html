@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Глазурь — керамика ручной работы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#top">Глазурь</a>
+    <nav><a href="#catalog">Каталог</a><a href="#about">О мастерской</a><a href="#contact">Контакты</a></nav>
+    <button class="cartbtn" id="openCart" aria-label="Открыть корзину">Корзина · <span id="count">0</span></button>
+  </header>
+
+  <div class="hero" id="top">
+    <div>
+      <h1>Посуда, которую хочется держать в руках</h1>
+      <p>Кружки, тарелки и вазы из глины, сделанные вручную небольшими партиями. У каждой вещи свой оттенок глазури.</p>
+      <a class="btn" href="#catalog">Смотреть каталог</a>
+    </div>
+    <div class="stack" aria-hidden="true">
+      <svg class="a" viewBox="0 0 100 100"><path d="M18 24h52v40a20 20 0 0 1-20 20H38a20 20 0 0 1-20-20z" fill="currentColor"/><path d="M70 34h8a12 12 0 0 1 0 28h-8" fill="none" stroke="currentColor" stroke-width="7"/></svg>
+      <svg class="b" viewBox="0 0 100 100"><path d="M34 10h32l-4 22c18 8 20 30 8 50-4 6-8 8-14 8h-12c-6 0-10-2-14-8-12-20-10-42 8-50z" fill="currentColor"/></svg>
+      <svg class="c" viewBox="0 0 100 100"><ellipse cx="50" cy="62" rx="44" ry="14" fill="currentColor"/><ellipse cx="50" cy="54" rx="30" ry="8" fill="rgba(255,255,255,.3)"/></svg>
+    </div>
+  </div>
+
+  <section id="catalog">
+    <div class="sechead">
+      <h2>Каталог</h2>
+      <div class="filters" role="group" aria-label="Фильтр по категории"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="about">
+    <div class="facts">
+      <div><h3>Ручная работа</h3><p>Каждое изделие лепится и обжигается в нашей мастерской в Бишкеке.</p></div>
+      <div><h3>Безопасная глазурь</h3><p>Посуду можно мыть в посудомоечной машине и греть в микроволновке.</p></div>
+      <div><h3>Доставка и обмен</h3><p>Доставляем по городу за 1–2 дня. Если вещь разбилась в пути, заменим бесплатно.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <div><h2 style="font-size:22px">Хотите заказ на свадьбу или офис?</h2><p style="margin:8px 0 0;color:var(--muted)">Сделаем набор в нужном цвете. Ответим в течение дня.</p></div>
+      <a class="btn" href="mailto:hello@glazur.example">Написать нам</a>
+    </div>
+  </section>
+  <footer>© 2026 Глазурь. Демо-страница: корзина работает, оплата не подключена.</footer>
+</div>
+
+<div class="veil" id="veil"></div>
+<aside class="drawer" id="drawer" aria-label="Корзина" aria-hidden="true">
+  <header><h2>Ваша корзина</h2><button class="close" id="closeCart" aria-label="Закрыть корзину">×</button></header>
+  <ul id="items"></ul>
+  <div class="total"><span>Итого</span><span id="sum">0 сом</span></div>
+  <button class="btn" id="checkout">Оформить заказ</button>
+  <div id="msg" role="status"></div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
